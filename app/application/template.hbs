@@ -1,0 +1,50 @@
+{{#side-menu width="40%"}}
+  <header class="navbar navbar-default">
+    <div class="navbar-header">
+      <h1>
+        {{#side-menu-toggle class="side-menu-toggle--invert"}}
+        <span class="fa fa-bars"></span>
+        {{/side-menu-toggle}}
+        Etch
+      </h1>
+    </div>
+  </header>
+  <ul class="side-menu-nav">
+    <li>
+      {{#side-menu-link-to "index"}}
+        My Memories
+      {{/side-menu-link-to}}
+    </li>
+    <li>
+      {{#side-menu-link-to "index"}}
+        My Friends
+      {{/side-menu-link-to}}
+    </li>
+    <li>
+      {{#side-menu-link-to "index"}}
+        Etch A Song
+      {{/side-menu-link-to}}
+    </li>
+    <li class="side-menu-nav__divider"></li>
+    <li class="logout">
+      {{#side-menu-link-to "index"}}
+        Logout
+      {{/side-menu-link-to}}
+    </li>
+  </ul>
+{{/side-menu}}
+{{content-backdrop}}
+<div class="page-content">
+  <main>
+    <div class="container">
+      {{#side-menu-toggle}}
+        <span class="fa fa-bars"></span>
+      {{/side-menu-toggle}}
+
+      {{outlet}}
+
+    </div>
+  </main>
+
+  {{outlet "footer"}}
+</div>
