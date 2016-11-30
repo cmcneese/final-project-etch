@@ -1,0 +1,16 @@
+@import "reset";
+
+.app {
+  background: blue;
+  display: flex;
+  height: 100vh;
+}
+
+.app__s {
+  background: yellow;
+}
+
+.app__m {
+  flex-grow: 1;
+  background: red;
+}
