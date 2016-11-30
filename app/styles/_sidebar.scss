@@ -5,6 +5,7 @@
 .side-menu {
   display: flex;
   flex-direction: column;
+  background: $c-warning;
 }
 
 .side-menu-toggle {
@@ -30,6 +31,7 @@
 
   li {
     padding: 1rem;
+
   }
 
   &__divider {
@@ -39,3 +41,13 @@
     border-bottom: 0.1rem solid #e5e5e5;
   }
 }
+
+.ember-view {
+  text-decoration: none;
+  color: $c-white;
+
+}
+
+// .ember-view.side-menu-toggle {
+//   color: $c-dark-gray;
+// }
