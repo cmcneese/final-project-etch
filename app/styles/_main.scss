@@ -1,11 +1,29 @@
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+.record {
+  display: block;
+  margin: 0 auto;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 400px;
 }
 
-.hero {
-  background: $c-warning;
+.memories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.memory {
+  flex: 1 200px;
+}
+
+.memory__img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
 }

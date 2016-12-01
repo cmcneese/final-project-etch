@@ -1,3 +1,14 @@
+.nav {
+  color: $c-warning;
+  font-size: 1rem;
+  padding: 0 1rem;
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
 .content-backdrop {
   background: none;
 }
@@ -9,19 +20,9 @@
 }
 
 .side-menu-toggle {
-  color: white;
+  color: $c-success;
   font-size: 1.2rem;
-  display: inline;
-  vertical-align: middle;
-  padding-right: 1rem;
-
-  &--invert {
-    color: black;
-  }
-}
-
-.navbar-header {
-  padding: 0 1rem;
+  display: inline-block;
 }
 
 .side-menu-nav {
@@ -32,6 +33,10 @@
   li {
     padding: 1rem;
 
+    a {
+      color: $c-white;
+      text-decoration: none;
+    }
   }
 
   &__divider {
@@ -40,12 +45,6 @@
     background: none;
     border-bottom: 0.1rem solid #e5e5e5;
   }
-}
-
-.ember-view {
-  text-decoration: none;
-  color: $c-white;
-
 }
 
 // .ember-view.side-menu-toggle {

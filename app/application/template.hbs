@@ -1,14 +1,15 @@
+<header class="nav">
+  <div class="nav-header">
+    {{#side-menu-toggle}}
+    <span class="fa fa-bars"></span>
+    {{/side-menu-toggle}}
+    <h1>
+      Etch
+    </h1>
+  </div>
+</header>
+
 {{#side-menu width="40%"}}
-  <header class="navbar navbar-default">
-    <div class="navbar-header">
-      <h1>
-        {{#side-menu-toggle class="side-menu-toggle--invert"}}
-        <span class="fa fa-bars"></span>
-        {{/side-menu-toggle}}
-        Etch
-      </h1>
-    </div>
-  </header>
   <ul class="side-menu-nav">
     <li>
       {{#side-menu-link-to "index"}}
@@ -37,9 +38,6 @@
 <div class="page-content">
   <main>
     <div class="container">
-      {{#side-menu-toggle}}
-        <span class="fa fa-bars"></span>
-      {{/side-menu-toggle}}
 
       {{outlet}}
 
