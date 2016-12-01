@@ -1,3 +1,10 @@
+.nav {
+  h1 {
+    color: $warning;
+    font-size: 30px;
+  }
+}
+
 .content-backdrop {
   background: none;
 }
@@ -5,23 +12,13 @@
 .side-menu {
   display: flex;
   flex-direction: column;
-  background: $c-warning;
+  background: $warning;
 }
 
 .side-menu-toggle {
-  color: white;
+  color: $success;
   font-size: 1.2rem;
-  display: inline;
-  vertical-align: middle;
-  padding-right: 1rem;
-
-  &--invert {
-    color: black;
-  }
-}
-
-.navbar-header {
-  padding: 0 1rem;
+  display: inline-block;
 }
 
 .side-menu-nav {
@@ -32,6 +29,10 @@
   li {
     padding: 1rem;
 
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   &__divider {
@@ -42,10 +43,8 @@
   }
 }
 
-.ember-view {
-  text-decoration: none;
-  color: $c-white;
-
+.button {
+  box-shadow: 2px 2px 2px #888888;
 }
 
 .ember-view.side-menu-toggle {

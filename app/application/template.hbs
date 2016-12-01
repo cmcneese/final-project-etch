@@ -1,14 +1,33 @@
-{{#side-menu width="40%"}}
-  <header class="navbar navbar-default">
-    <div class="navbar-header">
-      <h1>
-        {{#side-menu-toggle class="side-menu-toggle--invert"}}
-        <span class="fa fa-bars"></span>
-        {{/side-menu-toggle}}
-        Etch
-      </h1>
+<nav class="nav">
+  <div class="nav-left">
+    <div class="nav-item">
+      {{#side-menu-toggle}}
+      <span class="fa fa-bars"></span>
+      {{/side-menu-toggle}}
     </div>
-  </header>
+
+    <h1 class="nav-item is-brand">
+      Etch
+    </h1>
+  </div>
+
+  <div class="nav-right nav-menu">
+
+    <span class="nav-item">
+      <a class="button is-success">Login</a>
+      <a class="button is-success">Signup</a>
+      <a class="button" >
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+        <span>Tweet</span>
+      </a>
+    </span>
+  </div>
+
+</nav>
+
+{{#side-menu width="40%"}}
   <ul class="side-menu-nav">
     <li>
       {{#side-menu-link-to "index"}}
@@ -37,9 +56,6 @@
 <div class="page-content">
   <main>
     <div class="container">
-      {{#side-menu-toggle}}
-        <span class="fa fa-bars"></span>
-      {{/side-menu-toggle}}
 
       {{outlet}}
 
