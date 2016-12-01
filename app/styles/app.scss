@@ -29,3 +29,7 @@ $body-background: $white;
 @import "main";
 @import "ember-side-menu";
 @import "sidebar";
+
+.ember-view.side-menu-toggle.left {
+  padding: 1rem;
+}
