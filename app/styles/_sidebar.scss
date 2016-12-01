@@ -1,5 +1,5 @@
 .nav {
-  color: $c-warning;
+  color: $warning;
   font-size: 1rem;
   padding: 0 1rem;
 
@@ -16,11 +16,11 @@
 .side-menu {
   display: flex;
   flex-direction: column;
-  background: $c-warning;
+  background: $warning;
 }
 
 .side-menu-toggle {
-  color: $c-success;
+  color: $success;
   font-size: 1.2rem;
   display: inline-block;
 }
@@ -34,7 +34,7 @@
     padding: 1rem;
 
     a {
-      color: $c-white;
+      color: $white;
       text-decoration: none;
     }
   }
