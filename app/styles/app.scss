@@ -22,7 +22,9 @@ $dark-gray: #171717;
 $success: #7da29a;
 $warning: #a33333;
 
-@import "reset";
+$body-background: $white;
+
+// @import "reset";
 @import "bulma";
 @import "main";
 @import "ember-side-menu";
