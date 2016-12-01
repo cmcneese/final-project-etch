@@ -1,16 +1,29 @@
-$c-primary: #241c44;
-$c-secondary: #d7a55c;
-$c-white: #d8d4c3;
-$c-black: #261C1B;
-$c-gray: #353535;
-$c-dark-gray: #171717;
-$c-success: #7da29a;
-$c-warning: #a33333;
+// $c-primary: #241c44;
+// $c-secondary: #d7a55c;
+// $c-white: #d8d4c3;
+// $c-black: #261C1B;
+// $c-gray: #353535;
+// $c-dark-gray: #171717;
+// $c-success: #7da29a;
+// $c-warning: #a33333;
+
 
 $m-gutter: 1rem;
 $m-container: 70rem;
 
+// BULMA
+$family-sans-serif: 'Quicksand';
+$primary: #241c44;
+$secondary: #d7a55c;
+$white: #d8d4c3;
+$black: #261C1B;
+$gray: #353535;
+$dark-gray: #171717;
+$success: #7da29a;
+$warning: #a33333;
+
 @import "reset";
+@import "bulma";
 @import "main";
 @import "ember-side-menu";
 @import "sidebar";
