@@ -15,14 +15,17 @@ $m-container: 70rem;
 $family-sans-serif: 'Quicksand';
 $primary: #241c44;
 $secondary: #d7a55c;
-$white: #d8d4c3;
+
+$white: rgba(0, 0, 0, 0);
+$white-actual: #d8d4c3;
+
 $black: #261C1B;
 $gray: #353535;
 $dark-gray: #171717;
 $success: #7da29a;
 $warning: #a33333;
 
-$body-background: $white;
+$body-background: linear-gradient(180deg, $primary, $white-actual);
 
 // @import "reset";
 @import "bulma";
