@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('signup');
   this.route('profile');
   this.route('friends');
+  this.route('memories');
 });
 
 export default Router;
