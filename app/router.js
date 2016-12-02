@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('admin');
   this.route('login');
   this.route('profile');
+  this.route('friends');
 });
 
 export default Router;
