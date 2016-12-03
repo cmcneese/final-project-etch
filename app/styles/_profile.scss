@@ -60,3 +60,18 @@
     object-fit: cover;
   }
 }
+
+.profile-container {
+  display: flex;
+}
+
+.profile {
+  flex: 1 500px;
+}
+
+.info {
+  color: $primary;
+  // margin: 0 auto;
+  text-align: right;
+  padding: 3rem;
+}
