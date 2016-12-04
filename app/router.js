@@ -15,6 +15,8 @@ Router.map(function() {
   this.route('friends');
   this.route('memories');
   this.route('etch');
+  this.route('popular');
+  this.route('map');
 });
 
 export default Router;
