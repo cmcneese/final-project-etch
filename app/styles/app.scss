@@ -24,8 +24,8 @@ $warning: #a33333;
 
 $body-background: $white;
 
-// @import "reset";
 @import "bulma";
+@import "reset";
 @import "main";
 @import "ember-side-menu";
 @import "sidebar";
