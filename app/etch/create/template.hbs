@@ -1,0 +1,28 @@
+
+
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+
+    <label class="label">Emo</label>
+    <p class="control">
+
+      {{#each emotions as |emotion|}}
+        <button>{{emoji-character emotion}}</button>
+      {{/each}}
+    </p>
+    <label class="label">Write em out!</label>
+    <p class="control">
+      <textarea class="textarea" placeholder="Feelings..."></textarea>
+    </p>
+
+    <p class="control">
+  <button class="button is-warning">Submit</button>
+  <button class="button is-warning">Cancel</button>
+</p>
+
+  </div>
+  {{#link-to "etch"}}
+  <button class="modal-close"></button>
+  {{/link-to}}
+</div>
