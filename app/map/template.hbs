@@ -1,3 +1,7 @@
-{{outlet}}
+{{!-- {{outlet}}
 
-<h1>A map goes here</h1>
+<h1>A map goes here</h1> --}}
+
+{{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
+  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+{{/leaflet-map}}
