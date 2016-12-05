@@ -15,14 +15,21 @@
   <div class="nav-right nav-menu">
 
     <span class="nav-item">
-      <a class="button is-success">Login</a>
+      {{#link-to "login"}}
+      <button class="button is-success">Login</button>
+      {{/link-to}}
+
+      {{#link-to "signup"}}
       <a class="button is-success">Signup</a>
-      <a class="button" >
+      {{/link-to}}
+
+      <a href="https://twitter.com/EtchMemories" class="button">
         <span class="icon">
           <i class="fa fa-twitter"></i>
         </span>
         <span>Tweet</span>
       </a>
+
     </span>
   </div>
 
@@ -32,32 +39,32 @@
   <ul class="side-menu-nav">
     <p class="side--menu-title">Etch</p>
     <li>
-      {{#side-menu-link-to "index"}}
+      {{#side-menu-link-to "etch"}}
         Etch A Memory!
       {{/side-menu-link-to}}
     </li>
     <li>
-      {{#side-menu-link-to "index"}}
+      {{#side-menu-link-to "profile"}}
         My Profile
       {{/side-menu-link-to}}
     </li>
     <li>
-      {{#side-menu-link-to "index"}}
+      {{#side-menu-link-to "memories"}}
         My Memories
       {{/side-menu-link-to}}
     </li>
     <li>
-      {{#side-menu-link-to "index"}}
+      {{#side-menu-link-to "friends"}}
         My Friends
       {{/side-menu-link-to}}
     </li>
     <li>
-      {{#side-menu-link-to "index"}}
+      {{#side-menu-link-to "popular"}}
         Most Popular
       {{/side-menu-link-to}}
     </li>
     <li>
-      {{#side-menu-link-to "index"}}
+      {{#side-menu-link-to "map"}}
         Memory Map
       {{/side-menu-link-to}}
     </li>
