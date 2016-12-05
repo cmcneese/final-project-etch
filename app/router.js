@@ -14,9 +14,12 @@ Router.map(function() {
   this.route('profile');
   this.route('friends');
   this.route('memories');
-  this.route('etch');
+  this.route('etch', function() {
+    this.route('create');
+  });
   this.route('popular');
   this.route('map');
+  this.route('popup');
 });
 
 export default Router;
