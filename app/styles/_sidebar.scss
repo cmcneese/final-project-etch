@@ -50,8 +50,16 @@
 
 .ember-view {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .ember-view.side-menu-toggle {
   // width: 20%;
+}
+
+.side--menu-title {
+  color: $secondary;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 1rem;
 }
