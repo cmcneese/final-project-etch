@@ -53,13 +53,13 @@ ansi-escapes@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
 
-ansi-regex@*, ansi-regex@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.0.0.tgz#c5061b6e0ef8a81775e50f5d66151bf6bf371107"
-
 ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-0.2.1.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"
+
+ansi-regex@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.0.0.tgz#c5061b6e0ef8a81775e50f5d66151bf6bf371107"
 
 ansi-styles@^1.1.0:
   version "1.1.0"
@@ -1410,6 +1410,10 @@ ember-ajax@^2.4.1:
   dependencies:
     ember-cli-babel "^5.1.5"
 
+ember-buffered-proxy@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/ember-buffered-proxy/-/ember-buffered-proxy-0.5.1.tgz#7f50532ded3d8c19b5b457c12440ab4a211ba13d"
+
 ember-bulma@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/ember-bulma/-/ember-bulma-0.1.2.tgz#294f1076168420d1748d63fc6fffa6130494c379"
@@ -1464,6 +1468,12 @@ ember-cli-dependency-checker@^1.3.0:
     chalk "^0.5.1"
     is-git-url "0.2.0"
     semver "^4.1.0"
+
+ember-cli-emojione@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-emojione/-/ember-cli-emojione-0.1.0.tgz#a1f7bc5cae72c15305e7820607c6a20f197e334f"
+  dependencies:
+    ember-cli-babel "^5.1.6"
 
 ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
@@ -1720,6 +1730,14 @@ ember-cli@2.9.1:
     walk-sync "^0.3.0"
     yam "0.0.22"
 
+ember-composability-tools@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/ember-composability-tools/-/ember-composability-tools-0.0.3.tgz#7ff8c0fbbf2783ce315c35053e3e47fb37100afb"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+    ember-wormhole "0.4.1"
+
 ember-computed-decorators@^0.2.2, ember-computed-decorators@0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/ember-computed-decorators/-/ember-computed-decorators-0.2.2.tgz#7c934a575c55ac3a18b6aaeb7cd2cbe149bc9b34"
@@ -1769,11 +1787,35 @@ ember-font-awesome@2.2.0:
     ember-cli-htmlbars "^1.0.3"
     ember-computed-decorators "0.2.2"
 
+ember-getowner-polyfill@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-1.0.0.tgz#f847ceabd97ab97e9e9d279c382400a4d407a9d6"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+
 ember-inflector@^1.9.4:
   version "1.9.6"
   resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-1.9.6.tgz#574b093664ade6c66e84185d788ec99ed29741af"
   dependencies:
     ember-cli-babel "^5.1.6"
+
+ember-invoke-action@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ember-invoke-action/-/ember-invoke-action-1.2.0.tgz#5233deb3abe7baa62d476204bd2073bf9cc2d14d"
+  dependencies:
+    ember-cli-babel "^5.1.3"
+
+ember-leaflet@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/ember-leaflet/-/ember-leaflet-3.0.5.tgz#111c8c397404b6dd2f8c1acd116d305d02b56ddc"
+  dependencies:
+    broccoli-merge-trees "^1.0.0"
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+    ember-cli-version-checker "^1.1.4"
+    ember-composability-tools "0.0.3"
+    ember-invoke-action "1.2.0"
+    ember-wormhole "0.4.1"
 
 ember-load-initializers@^0.5.1:
   version "0.5.1"
@@ -1816,6 +1858,29 @@ ember-side-menu@0.0.11:
   resolved "https://registry.yarnpkg.com/ember-side-menu/-/ember-side-menu-0.0.11.tgz#88c151e34197035dd83e9c0e69935601e1d7c734"
   dependencies:
     ember-cli-babel "^5.1.7"
+
+ember-simple-auth-token@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ember-simple-auth-token/-/ember-simple-auth-token-1.2.0.tgz#0bfd0975d613891d4d8d5d38b6fbc754ccb26c8d"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+
+ember-simple-auth@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ember-simple-auth/-/ember-simple-auth-1.1.0.tgz#7a6162e1b58b88c4b535e4476be6033be233b2b6"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-getowner-polyfill "1.0.0"
+    silent-error "^1.0.0"
+
+ember-simple-form@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ember-simple-form/-/ember-simple-form-2.1.0.tgz#0b417387e40adf863fa91e323828d17b99e898a5"
+  dependencies:
+    ember-buffered-proxy "0.5.1"
+    ember-cli-babel "^5.1.5"
+    ember-cli-htmlbars "^1.0.1"
 
 ember-test-helpers@^0.5.32:
   version "0.5.34"
@@ -1868,6 +1933,13 @@ ember-welcome-page@^1.0.3:
 ember-wormhole@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/ember-wormhole/-/ember-wormhole-0.5.1.tgz#f2a6fff13b1c037ffa83b2c9291d8b5978878e5b"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+
+ember-wormhole@0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ember-wormhole/-/ember-wormhole-0.4.1.tgz#55fafaad20a650d21f6583a0e59c060a65338111"
   dependencies:
     ember-cli-babel "^5.1.6"
     ember-cli-htmlbars "^1.0.3"
@@ -2693,7 +2765,7 @@ iferr@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
 
-imurmurhash@*, imurmurhash@^0.1.4:
+imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
 
