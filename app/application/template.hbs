@@ -43,21 +43,23 @@
         Etch A Memory!
       {{/side-menu-link-to}}
     </li>
-    <li>
-      {{#side-menu-link-to "profile"}}
-        My Profile
-      {{/side-menu-link-to}}
-    </li>
-    <li>
-      {{#side-menu-link-to "memories"}}
-        My Memories
-      {{/side-menu-link-to}}
-    </li>
-    <li>
-      {{#side-menu-link-to "friends"}}
-        My Friends
-      {{/side-menu-link-to}}
-    </li>
+    {{#if currentUser.user}}
+      <li>
+        {{#side-menu-link-to "admin.profile"}}
+          My Profile
+        {{/side-menu-link-to}}
+      </li>
+      <li>
+        {{#side-menu-link-to "admin.friends.memories" currentUser.user}}
+          My Memories
+        {{/side-menu-link-to}}
+      </li>
+      <li>
+        {{#side-menu-link-to "admin.friends"}}
+          My Friends
+        {{/side-menu-link-to}}
+      </li>
+    {{/if}}
     <li>
       {{#side-menu-link-to "popular"}}
         Most Popular
