@@ -26,6 +26,7 @@ $body-background: $white;
 
 @import "bulma";
 @import "reset";
+@import "ember-power-select";
 @import "main";
 @import "ember-side-menu";
 @import "sidebar";
@@ -33,6 +34,10 @@ $body-background: $white;
 
 .ember-view.side-menu-toggle.left {
   padding: 1rem;
+}
+
+.ember-power-select-dropdown {
+  z-index: 1989;
 }
 
 @import "profile";
