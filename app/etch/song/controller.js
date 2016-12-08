@@ -13,5 +13,17 @@ export default Ember.Controller.extend({
           return data.tracks.items;
         });
     }
-  }
+  },
+
+  emotions: [
+    'clap',
+    'grinning',
+    'heart_eyes',
+    'yum',
+    'dancer_tone3',
+    'thinking',
+    'cry',
+    'nauseated_face',
+    'metal',
+  ]
 });
