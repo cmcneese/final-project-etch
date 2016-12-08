@@ -32,6 +32,7 @@ $body-background: $white;
 @import "sidebar";
 @import "footer";
 
+
 .ember-view.side-menu-toggle.left {
   padding: 1rem;
 }
@@ -46,3 +47,4 @@ $body-background: $white;
 @import "etch";
 @import "map";
 @import "memories";
+@import "friends";
