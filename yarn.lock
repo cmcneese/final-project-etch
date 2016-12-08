@@ -1483,6 +1483,13 @@ ember-cli-get-dependency-depth@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-dependency-depth/-/ember-cli-get-dependency-depth-1.0.0.tgz#e0afecf82a2d52f00f28ab468295281aec368d11"
 
+ember-cli-gravatar@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-gravatar/-/ember-cli-gravatar-3.7.1.tgz#7a2121fa479b7604e1232c1c6b11919c2c80397b"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+
 ember-cli-htmlbars-inline-precompile@^0.3.3:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars-inline-precompile/-/ember-cli-htmlbars-inline-precompile-0.3.6.tgz#4095fe423f93102724c0725e4dd1a31f25e24de5"
