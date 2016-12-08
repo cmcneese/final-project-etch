@@ -2,19 +2,19 @@
 <div class="etch-container">
 
   <div class="hero">
-    {{#link-to "etch.create"}}
-    <img class="record" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png"/>
+    {{#link-to "etch.song"}}
+    <img class="record-song" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png"/>
     {{/link-to}}
   </div>
 
   <div class="etch-info content">
-    <h4>Step 1: {{emoji-character "notes"}} Hear a song {{emoji-character "notes"}}</h4>
-    <h4>Step 2: Click the {{emoji-character "cd"}} to recognize your song</h4>
-    <h4>Step 3: Save your memory! {{emoji-character "heart"}}</h4>
+    <h3>Step 1: {{emoji-character "notes"}} Hear a song {{emoji-character "notes"}}</h3>
+    <h3>Step 2: Click the {{emoji-character "cd"}} and search for your song</h3>
+    <h3>Step 3: Save your memory! {{emoji-character "heart"}}</h3>
   </div>
 
-  {{#each model as |track|}}
+  {{!-- {{#each model as |track|}}
     {{track.name}}
-  {{/each}}
+  {{/each}} --}}
 
 </div>

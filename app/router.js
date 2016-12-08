@@ -19,7 +19,9 @@ Router.map(function() {
 
   this.route('signup');
   this.route('etch', function() {
+    this.route('song');
     this.route('create');
+    this.route('log');
   });
   this.route('popular');
   this.route('map');
