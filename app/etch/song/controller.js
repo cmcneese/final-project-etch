@@ -12,6 +12,15 @@ export default Ember.Controller.extend({
         }).then((data) => {
           return data.tracks.items;
         });
+    },
+
+    saveMemory(spotifyTrack, formValues) {
+        const memory = this.store.createRecord('memory', {
+          ...formValues,
+          spotifyId: spotifyTrack.id,
+        });
+
+        memory.save()
     }
   },
 
