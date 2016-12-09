@@ -5,5 +5,7 @@ export default DS.Model.extend({
   password: DS.attr('string'),
   passwordConfirmation: DS.attr('string'),
   name: DS.attr('string'),
-  username: DS.attr('string')
+  username: DS.attr('string'),
+
+  memories: DS.hasMany('memory'),
 });
