@@ -11,8 +11,9 @@
             {{artist.name}}
           {{/each}}
         </strong>
+
         <large>{{track.name}}</large>
-        <strong>{{memory.date}}</strong>
+        <strong>{{moment-from-now memory.createdAt "YYYY-MM-DD HH:mm:ss"}}</strong>
         <br>
         {{emoji-character memory.emoji}} {{memory.text}}
       </p>

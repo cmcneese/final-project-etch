@@ -1,5 +1,5 @@
 {{outlet}}
 
-{{#each model.memories as |memory|}}
+{{#each (sort-by "createdAt:desc" model.memories) as |memory|}}
   {{memory-item memory=memory}}
 {{/each}}
