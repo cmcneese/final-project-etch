@@ -15,6 +15,8 @@ export default Ember.Service.extend({
       current: true,
     }).then((user) => {
       this.set('user', user);
+
+      return user;
     });
     }
   }
