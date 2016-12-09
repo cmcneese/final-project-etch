@@ -1,0 +1,21 @@
+<article class="media">
+  <figure class="media-left">
+      <img class="image" src="{{album.url}}">
+  </figure>
+
+  <div class="media-content">
+    <div class="content">
+      <p class="etch-memories">
+        <strong>
+          {{#each track.artists as |artist|}}
+            {{artist.name}}
+          {{/each}}
+        </strong>
+        <large>{{track.name}}</large>
+        <strong>{{memory.date}}</strong>
+        <br>
+        {{emoji-character memory.emoji}} {{memory.text}}
+      </p>
+    </div>
+  </div>
+</article>

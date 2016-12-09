@@ -1,21 +1,5 @@
 {{outlet}}
 
 {{#each model.memories as |memory|}}
-  <article class="media">
-    <figure class="media-left">
-        <img class="image" src="http://cdn-s3.allmusic.com/release-covers/500/0000/332/0000332502.jpg">
-    </figure>
-
-    <div class="media-content">
-      <div class="content">
-        <p class="etch-memories">
-          <strong>{{memory.track.artists.[0].name}}</strong>
-          <large>{{memory.track.name}}</large>
-          <strong>{{memory.date}}</strong>
-          <br>
-          {{emoji-character memory.emoji}} {{memory.text}}
-        </p>
-      </div>
-    </div>
-  </article>
+  {{memory-item memory=memory}}
 {{/each}}
