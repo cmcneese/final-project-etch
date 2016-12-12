@@ -4,15 +4,15 @@
 
   <div class="profile">
     <div class="record">
-      <img class="record__pic" src="http://s1.ticketm.net/tm/en-us/dam/a/464/a0f4b7ae-b7c5-458d-8336-396ce71ae464_203561_CUSTOM.jpg"/>
-      {{!-- <img class="image" src="your-image.png"> --}}
+      <img class="record__pic" src="{{model.fullProfilePicUrl}}"/>
+      <img class="image" src="your-image.png">
     </div>
   </div>
-  <button type="button" class="form__btn"{{action "choosePic" currentUser.user}}>Upload Pic</button>
   <div class="info content">
-    <h1>@kittybot</h1>
-    <h2>Nashville, TN.</h2>
-    <h2>http://kittybotblog.io</h2>
+    <h1>@{{model.username}}</h1>
+    {{!-- <h2>Nashville, TN.</h2>
+    <h2>http://kittybotblog.io</h2> --}}
+    <button type="button" class="form__btn"{{action "choosePic" currentUser.user}}>Upload Profile Pic</button>
   </div>
 
 </div>
