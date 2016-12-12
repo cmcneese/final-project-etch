@@ -26,7 +26,13 @@ export default Ember.Controller.extend({
     }
   },
 
+
   actions: {
+    update(formValues) {
+      this.model.setProperties(formValues);
+      this.model.save(formValues);
+    },
+
     choosePic(formValues) {
       this.get('filesystem').prompt().then((upload) => {
         this.saveUser(upload[0]);
