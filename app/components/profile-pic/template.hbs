@@ -1,0 +1,7 @@
+<div class="record {{if center "record--with-center"}}">
+  {{#if user.profilePicUrl}}
+    <img class="record__pic" src="{{user.fullProfilePicUrl}}"/>
+    {{else}}
+    {{gravatar-image email=user.email class="record__pic"}}
+  {{/if}}
+</div>
