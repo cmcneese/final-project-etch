@@ -77,3 +77,12 @@
   text-align: right;
   padding: 3rem;
 }
+
+.form__btn {
+  border-radius: 10%;
+  // height: 2rem;
+  color: white;
+  background: $warning;
+  border-color: transparent;
+
+}
