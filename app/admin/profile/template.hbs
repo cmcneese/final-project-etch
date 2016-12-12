@@ -3,10 +3,7 @@
 <div class="profile-container">
 
   <div class="profile">
-    <div class="record">
-      <img class="record__pic" src="{{model.fullProfilePicUrl}}"/>
-      <img class="image" src="your-image.png">
-    </div>
+    {{profile-pic user=model}}
   </div>
   <div class="info content">
     <h1>@{{model.username}}</h1>

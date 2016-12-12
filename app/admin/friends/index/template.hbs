@@ -3,11 +3,10 @@
 <div class="memories">
 
   {{#each model as |friend|}}
-  <div class="memory">
-    <div class="record record--with-center">
-      {{gravatar-image email=friend.email class="record__pic"}}
-    </div>
-    <p class="has-text-centered subtitle">{{friend.username}}</p> </div>
+  {{#link-to "admin.friends.profile" friend class="memory"}}
+    {{profile-pic user=friend center=true}}
+    <p class="has-text-centered subtitle">{{friend.username}}</p>
+  {{/link-to}}
   {{/each}}
 
 </div>
