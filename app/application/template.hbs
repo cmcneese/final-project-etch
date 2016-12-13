@@ -1,4 +1,4 @@
-{{ currentUser.user.email }}
+
 <nav class="nav">
   <div class="nav-left">
     <div class="nav-item">
@@ -16,6 +16,8 @@
 
     <span class="nav-item">
       {{#if currentUser.user}}
+      <span class="nav-item">{{ currentUser.user.username }}</span>
+
         <button class="button is-success" {{action "logout"}}>Logout</button>
       {{else}}
         {{#link-to "login" class="button is-success"}}

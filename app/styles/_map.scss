@@ -1,4 +1,8 @@
 .leaflet-container {
+  margin-top: 2rem;
   height: 40rem;
   width: 100%;
+  border-radius: 10px;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+  overflow: hidden;
 }
