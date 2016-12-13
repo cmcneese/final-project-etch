@@ -7,9 +7,14 @@
   margin-top: 6rem;
 
   .album {
-    max-width: 25rem;
+    max-width: 28rem;
     border-radius: 50%;
     box-shadow: 2px 2px 2px #888888;
+    transition: transform 1s;
+
+    &:hover {
+      animation: pulse 5s infinite linear;
+    }
   }
 }
 
