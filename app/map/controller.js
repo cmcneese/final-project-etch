@@ -3,6 +3,9 @@ export default Ember.Controller.extend({
   lng: -86.776183,
   zoom: 10,
   myFirstMemory: [36.152675, -86.776183],
+
+
+
   actions: {
     updateCenter(e) {
       let center = e.target.getCenter();
