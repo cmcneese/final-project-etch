@@ -15,13 +15,17 @@
   <div class="nav-right nav-menu">
 
     <span class="nav-item">
-      {{#link-to "login" class="button is-success"}}
-      Login
-      {{/link-to}}
+      {{#if currentUser.user}}
+        <button class="button is-success" {{action "logout"}}>Logout</button>
+      {{else}}
+        {{#link-to "login" class="button is-success"}}
+        Login
+        {{/link-to}}
 
-      {{#link-to "signup"}}
-      <a class="button is-success">Signup</a>
-      {{/link-to}}
+        {{#link-to "signup" class="button is-success"}}
+        Signup
+        {{/link-to}}
+      {{/if}}
 
       <a href="https://twitter.com/EtchMemories" class="button">
         <span class="icon">

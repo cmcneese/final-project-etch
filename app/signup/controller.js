@@ -17,7 +17,10 @@ export default Ember.Controller.extend({
         };
         const authenticator = 'authenticator:jwt';
 
-        this.get('session').authenticate(authenticator, secretStuff);
+        return this.get('session').authenticate(authenticator, secretStuff);
+      })
+      .then(() => {
+        return this.get('currentUser').loadCurrentUser();
       })
       .then(() => {
         this.transitionToRoute('admin');
