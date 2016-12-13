@@ -1,18 +1,25 @@
 .etch-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-around;
   margin-top: 6rem;
+
+  .album {
+    max-width: 28rem;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #888888;
+    transition: transform 1s;
+
+    &:hover {
+      animation: pulse 5s infinite linear;
+    }
+  }
 }
 
 .etch-info {
   color: $primary;
   // margin: 0 auto;
   // padding: 2rem;
-}
-
-.record-song {
-  position: fixed;
-  max-width: 25rem;
 }
