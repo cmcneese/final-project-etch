@@ -5,4 +5,17 @@
 <p>Latitude: <code>{{lat}}</code> / Longitude: <code>{{lng}}</code></p>
 {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom onMoveend=(action "updateCenter")}}
   {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+  {{#each model as |memory|}}
+    {{#if memory.lat}}
+
+      {{#marker-layer location=(arr memory.lat memory.lng)}}
+        {{#popup-layer}}
+          <h2>{{ memory.user.username }}  {{emoji-character memory.emoji }} {{ memory.trackId }}</h2>
+        {{/popup-layer}}
+      {{/marker-layer}}
+    {{/if}}
+  {{/each}}
+
+
 {{/leaflet-map}}

@@ -20,14 +20,20 @@ export default Ember.Controller.extend({
     },
 
     saveMemory(spotifyTrack, formValues) {
+      this.set('disabled', true);
+
+      navigator.geolocation.getCurrentPosition((position => {
         const memory = this.store.createRecord('memory', {
           ...formValues,
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
           trackId: spotifyTrack.id,
         });
 
         memory.save().then(() => {
           this.transitionToRoute('admin.friends.memories', this.get('currentUser.user.id'));
-        })
+        });
+      }));
     }
   },
 
