@@ -8,4 +8,6 @@ export default DS.Model.extend({
   lat: DS.attr('number'),
   lng: DS.attr('number'),
   createdAt: DS.attr('string'),
+
+  track: DS.belongsTo('track'),
 });
