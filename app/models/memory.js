@@ -5,6 +5,7 @@ export default DS.Model.extend({
   trackId: DS.attr('string'),
   emoji: DS.attr('string'),
   text: DS.attr('string'),
-
+  lat: DS.attr('number'),
+  lng: DS.attr('number'),
   createdAt: DS.attr('string'),
 });

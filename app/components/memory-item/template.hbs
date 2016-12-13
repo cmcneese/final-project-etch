@@ -1,21 +1,17 @@
-<li class="etch-memories__item">
+  <li class="etch-memories__item">
+    <img class="record" src="{{album.url}}"/>
+      <div class="etch-memories__item-content">
+            <div class="content">
+              <p class="">
+                {{#each track.artists as |artist|}}
+                  {{artist.name}}
+                {{/each}}
+              </p>
 
-  <img class="record" src="{{album.url}}"/>
-
-
-    <div class="etch-memories__item-content">
-          <div class="content">
-            <strong class="">
-              {{#each track.artists as |artist|}}
-                {{artist.name}}
-              {{/each}}
-            </strong>
-
-            <large>{{track.name}}</large>
-            <strong>{{moment-from-now memory.createdAt "YYYY-MM-DD HH:mm:ss"}}</strong>
-            <br>
-            {{emoji-character memory.emoji}} {{memory.text}}
-          </div>
-    </div>
-
-</li>
+              <p>{{track.name}}</p>
+              <p>{{moment-from-now memory.createdAt "YYYY-MM-DD HH:mm:ss"}}</p>
+              <br>
+              {{emoji-character memory.emoji}} {{memory.text}}
+            </div>
+      </div>
+  </li>
