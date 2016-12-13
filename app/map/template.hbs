@@ -9,9 +9,11 @@
   {{#each model as |memory|}}
     {{#if memory.lat}}
 
-      {{#marker-layer location=(arr memory.lat memory.lng)}}
+      {{#marker-layer
+        location=(arr memory.lat memory.lng)
+        icon=(icon iconUrl="/images/record.png" iconSize=(point 40 40))}}
         {{#popup-layer}}
-          <h2>{{ memory.user.username }}  {{emoji-character memory.emoji }} {{ memory.trackId }}</h2>
+          <h2>{{emoji-character memory.emoji }} {{ memory.user.username }} </h2>
         {{/popup-layer}}
       {{/marker-layer}}
     {{/if}}
