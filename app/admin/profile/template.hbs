@@ -7,14 +7,15 @@
   </div>
   <div class="info content">
     <h1>@{{model.username}}</h1>
+    <h2>{{model.name}}</h2>
     {{!-- <h2>Nashville, TN.</h2>
     <h2>http://kittybotblog.io</h2> --}}
     <button type="button" class="form__btn"{{action "choosePic" currentUser.user}}>Upload Profile Pic</button>
 
 
     {{#simple-form startingValues=model onsubmit=(action "update") as |formValues|}}
-      {{input value=formValues.username placeholder="Username"}}
-      {{input value=formValues.email placeholder="Email"}}
+      {{!-- {{input value=formValues.username placeholder="Username"}} --}}
+      {{!-- {{input value=formValues.email placeholder="Email"}} --}}
       {{input value=formValues.location placeholder="Location"}}
 
 
