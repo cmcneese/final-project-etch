@@ -4,11 +4,11 @@
 
   <div class="profile">
     {{profile-pic user=model}}
-    <h2>{{model.name}}</h2>
+    <h2 class="profile__name">{{model.name}}</h2>
     <button type="button" class="upload__btn"{{action "choosePic" currentUser.user}}>Upload Profile Pic</button>
   </div>
   <div class="info content">
-    <h1>@{{model.username}}</h1>
+    <h1 class="profile__username">@{{model.username}}</h1>
 
 
 
@@ -31,7 +31,7 @@
     <div class="record record--with-center">
       <img class="record__pic" src="{{memory.track.album.images.firstObject.url}}"/>
     </div>
-    <h3>{{memory.track.name}}</h3>
+    <h3 class="recent-memory__trackname">{{memory.track.name}}</h3>
   </div>
   {{/each}}
 
