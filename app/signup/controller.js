@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
+  currentUser: Ember.inject.service(),
 
   actions: {
     saveUser(formValues) {
@@ -25,8 +26,8 @@ export default Ember.Controller.extend({
       .then(() => {
         this.transitionToRoute('admin');
       })
-      .catch(() => {
-
+      .catch((e) => {
+        console.log(e);
         alert('Error Creating User');
       });
     }
