@@ -89,12 +89,14 @@
 
 }
 
-// .ember-text-field {
-//   margin: 1rem;
-// }
 
 h2 {
   margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
   display: flex;
   justify-content: center;
 }
