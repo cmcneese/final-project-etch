@@ -38,14 +38,18 @@ export default Ember.Controller.extend({
   },
 
   emotions: [
-    'clap',
-    'grinning',
     'heart_eyes',
+    'grinning',
     'yum',
-    'dancer_tone3',
+    'relaxed',
     'thinking',
+    'frowning2',
+    'neutral_face',
+    'sleeping',
     'cry',
     'nauseated_face',
     'metal',
+    'clap',
+    'ok_hand',
   ]
 });
