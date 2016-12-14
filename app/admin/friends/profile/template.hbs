@@ -14,11 +14,16 @@
 </div>
 
 <div class="memories">
-  {{#each (take 4 model.memories) as |memory|}}
-    <div class="memory">
-      <div class="record record--with-center">
-        <img class="record__pic" src="http://www.comparevinyl.com/assets/blank_record-88f526f5bf343a5eba24e53c62acfe85.png" />
-      </div>
+
+  {{#each (take 4 (sort-by "createdAt:desc" model.memories)) as | memory |}}
+  <div class="memory">
+    <div class="record record--with-center">
+      <img class="record__pic" src="{{memory.track.album.images.firstObject.url}}"/>
     </div>
+    <h2>{{memory.track.name}}</h2>
+  </div >
+
   {{/each}}
+
 </div>
+<h3 class="title has-text-centered"> {{#link-to 'admin.friends.memories' model class="button is-large is-primary"}}All Memories{{/link-to}}</h3>
