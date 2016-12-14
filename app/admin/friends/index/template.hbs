@@ -4,7 +4,7 @@
 
   {{#each model as |friend|}}
   {{#link-to "admin.friends.profile" friend class="memory"}}
-    {{profile-pic user=friend center=true}}
+    {{profile-pic user=friend}}
     <p class="has-text-centered subtitle">{{friend.username}}</p>
   {{/link-to}}
   {{/each}}
