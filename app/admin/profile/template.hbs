@@ -29,11 +29,11 @@
   {{#each (take 4 (sort-by "createdAt:desc" model.memories)) as | memory |}}
   <div class="memory">
     <div class="record record--with-center">
-      <img class="record__pic" src="{{memory.track.album.images.firstObject.url}}"/>
+      <img class="record__pic">src={{memory.track.album.images.firstObject.url}}</img>
     </div>
     <h3 class="recent-memory__trackname">{{memory.track.name}}</h3>
   </div>
   {{/each}}
 
 </div>
-<h3 class="title has-text-centered"> {{#link-to 'admin.friends.memories' model class="button is-large is-primary"}}All Memories{{/link-to}}</h3>
+<h3 class="all-memories__button"> {{#link-to 'admin.friends.memories' model class="button is-large is-primary"}}All Memories{{/link-to}}</h3>
