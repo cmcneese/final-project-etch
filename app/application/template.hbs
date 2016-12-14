@@ -45,7 +45,7 @@
   <ul class="side-menu-nav">
 
     <p class="side--menu-title">
-      {{#link-to "admin"}}
+      {{#link-to "index"}}
       etch
       {{/link-to}}
     </p>
@@ -83,11 +83,11 @@
       {{/side-menu-link-to}}
     </li>
     <li class="side-menu-nav__divider"></li>
+    {{#if currentUser.user}}
     <li class="logout">
-      {{#side-menu-link-to "index"}}
-        Logout
-      {{/side-menu-link-to}}
+        <a {{action "logout"}}>Logout</a>
     </li>
+    {{/if}}
   </ul>
 
 
