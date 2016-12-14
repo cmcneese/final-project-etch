@@ -9,25 +9,31 @@
 
 .etch-memories {
   padding: 2rem 0;
-  width: 0.5rem;
-  background: $gray;
+  width: 0.8rem;
+  border-radius: 1rem;
+  background: $warning;
   min-height: 40rem;
   margin: auto;
 
-  .record {
-    width: 100%;
-    max-width: 100%;
-  }
+  // .record {
+  //   width: 100%;
+  //   max-width: 100%;
+  // }
 
   &__item {
+    // border-top: 4px solid $gray;
     position: relative;
-    transform: translateX(-50%);
+    margin-bottom: 5rem;
+    transform: translateX(-90%);
     width: 18rem;
 
     &:nth-of-type(odd) {
+      transform: translateX(-10%);
+
       .etch-memories__item-content {
         left: auto;
         right: 100%;
+        text-align: right;
       }
     }
   }
@@ -39,13 +45,10 @@
   &__pic {
     position: relative;
 
-
   }
 
   &__item-content {
     position: absolute;
-    justify-content: flex-end;
-    display: block;
     width: 100%;
 
     top: 0;
@@ -53,6 +56,4 @@
     margin: 0 1rem;
   }
 
-  // p:nth-of-type(even) {
-  // }
 }

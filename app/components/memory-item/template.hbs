@@ -1,17 +1,15 @@
-  <li class="etch-memories__item">
+  <li class="etch-memories__item is-clearfix">
     <img class="record" src="{{memory.track.album.images.firstObject.url}}"/>
-      <div class="etch-memories__item-content">
-            <div class="content">
-              <p class="">
-                {{#each memory.track.artists as |artist|}}
-                  {{artist.name}}
-                {{/each}}
-              </p>
+    <div class="etch-memories__item-content">
+      <p>{{moment-from-now memory.createdAt}}</p>
 
-              <p>{{memory.track.name}}</p>
-              <p>{{moment-from-now memory.createdAt "YYYY-MM-DD HH:mm:ss"}}</p>
-              <br>
-              {{emoji-character memory.emoji}} {{memory.text}}
-            </div>
-      </div>
+      <h1 class="title is-5">
+        {{#each memory.track.artists as |artist|}}
+          {{artist.name}}
+        {{/each}}
+      </h1>
+
+      <h2 class="subtitle is-6">{{memory.track.name}}</h2>
+      {{emoji-character memory.emoji}} {{memory.text}}
+    </div>
   </li>
