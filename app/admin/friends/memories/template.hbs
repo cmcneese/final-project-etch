@@ -1,4 +1,9 @@
 {{outlet}}
+<div class="content has-text-centered">
+  <p class="title is-2">My Etch Timeline</p>
+  <p class="subtitle is-4">{{emoji-character "notes"}} What have I been listening to? {{emoji-character "notes"}}</p>
+</div>
+
 
 <ul class="etch-memories">
   {{#each (sort-by "createdAt:desc" model.memories) as |memory|}}
