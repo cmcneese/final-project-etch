@@ -15,20 +15,31 @@
   min-height: 40rem;
   margin: auto;
 
-  // .record {
-  //   width: 100%;
-  //   max-width: 100%;
-  // }
+  .shit {
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+  }
 
   &__item {
     // border-top: 4px solid $gray;
     position: relative;
     margin-bottom: 5rem;
-    transform: translateX(-90%);
-    width: 18rem;
+    transform: translateX(-96%);
+    width: 35rem;
+
+    .record {
+      max-width: 11rem;
+      margin: 0;
+      margin-left: calc(100% - 14rem);
+    }
 
     &:nth-of-type(odd) {
-      transform: translateX(-10%);
+      transform: translateX(-2%);
+
+      .record {
+        margin-left: 3rem;
+      }
 
       .etch-memories__item-content {
         left: auto;
