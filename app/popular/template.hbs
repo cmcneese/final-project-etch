@@ -1,14 +1,19 @@
 {{outlet}}
 
-<h2>Most Popular</h2>
+<div class="content has-text-centered is-medium">
 
-<div class="memories">
-  {{#each model as |track|}}
-  <div class="memory">
-    <div class="record record--with-center">
-      <img class="record__pic" src="{{track.album.images.firstObject.url}}"/>
+<h1>Most Popular</h1>
+<p>Check out the most popular songs on etch right now!</p>
+
+  <div class="memories">
+    {{#each model as |track|}}
+    <div class="memory">
+      <div class="record record--with-center">
+        <img class="record__pic" src="{{track.album.images.firstObject.url}}"/>
+      </div>
+      <h2>{{track.name}} - {{track.popularity}}</h2>
     </div>
-    <h2>{{track.name}} - {{track.popularity}}</h2>
+    {{/each}}
   </div>
-  {{/each}}
+
 </div>
