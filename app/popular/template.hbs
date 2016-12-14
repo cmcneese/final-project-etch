@@ -1,7 +1,7 @@
 {{outlet}}
 
 <ul class="popular">
-  {{#each (sort-by "createdAt:desc" model.memories) as |memory|}}
-    {{memory-item memory=memory}}
+  {{#each model as |track|}}
+    <li>{{track.name}}{{track.popularity}}</li>
   {{/each}}
 </ul>
