@@ -1,7 +1,14 @@
 {{outlet}}
 
-<ul class="popular">
+<h2>Most Popular</h2>
+
+<div class="memories">
   {{#each model as |track|}}
-    <li>{{track.name}}{{track.popularity}}</li>
+  <div class="memory">
+    <div class="record record--with-center">
+      <img class="record__pic" src="{{track.album.images.firstObject.url}}"/>
+    </div>
+    <h2>{{track.name}} - {{track.popularity}}</h2>
+  </div>
   {{/each}}
-</ul>
+</div>
