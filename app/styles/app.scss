@@ -52,3 +52,8 @@ $body-background: $white;
 @import "modal";
 @import "popular";
 @import "components/record";
+
+.has-underline {
+  border-bottom: $primary solid 0.1rem;
+  padding: 0.5rem;
+}
