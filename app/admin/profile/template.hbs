@@ -29,7 +29,7 @@
   {{#each (take 4 (sort-by "createdAt:desc" model.memories)) as | memory |}}
   <div class="memory">
     <div class="record record--with-center">
-      <img class="record__pic">src={{memory.track.album.images.firstObject.url}}</img>
+      <img class="record__pic" src={{memory.track.album.images.firstObject.url}}>
     </div>
     <h3 class="recent-memory__trackname">{{memory.track.name}}</h3>
   </div>
