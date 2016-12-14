@@ -7,10 +7,11 @@ export default DS.Model.extend({
   passwordConfirmation: DS.attr('string'),
   name: DS.attr('string'),
   username: DS.attr('string'),
+  location: DS.attr('string'),
 
   profilePicUrl: DS.attr('string'),
-    memories: DS.hasMany('memory'),
+  memories: DS.hasMany('memory'),
   fullProfilePicUrl: Ember.computed('profilePicUrl', function() {
     return `http://localhost:3333/uploads/${this.get('profilePicUrl')}`
-  }),
+  })
 });

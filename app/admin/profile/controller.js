@@ -28,9 +28,11 @@ export default Ember.Controller.extend({
 
 
   actions: {
-    update(formValues) {
+    update(closeForm, formValues) {
       this.model.setProperties(formValues);
-      this.model.save(formValues);
+      this.model.save(formValues).then(() => {
+        closeForm();
+      });
     },
 
     choosePic(formValues) {
