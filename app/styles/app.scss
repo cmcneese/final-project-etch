@@ -54,6 +54,16 @@ $body-background: $white;
 @import "components/record";
 
 .has-underline {
-  border-bottom: $primary solid 0.1rem;
+  border-bottom: $warning solid 0.5rem;
+  border-radius: 0.25rem;
   padding: 0.5rem;
+}
+
+.title.is-1 {
+   color: $warning;
+}
+
+.nav-item {
+  color: $black;
+  // font-weight: bold;
 }

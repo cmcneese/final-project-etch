@@ -4,7 +4,7 @@
   flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-around;
-  margin-top: 6rem;
+  margin-top: 3rem;
 
   .album {
     max-width: 28rem;
@@ -39,4 +39,8 @@
     background: $warning;
 
   }
+}
+
+.title.is-2 {
+  color: $warning;
 }

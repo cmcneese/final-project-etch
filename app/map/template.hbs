@@ -1,23 +1,29 @@
-{{!-- {{outlet}}
 
-<h1>A map goes here</h1> --}}
+<div class="content has-text-centered">
+  <h1 class="title is-2">{{emoji-character "notes"}} Memory Map {{emoji-character "earth_americas"}}</h1>
+  <p class="subtitle is-4">etch's all over the world!</p>
+</div>
 
-{{!-- <p>Latitude: <code>{{lat}}</code> / Longitude: <code>{{lng}}</code></p> --}}
-{{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom onMoveend=(action "updateCenter")}}
-  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+<div class="map">
+    {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom onMoveend=(action "updateCenter")}}
+      {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-  {{#each model as |memory|}}
-    {{#if memory.lat}}
+      {{#each model as |memory|}}
+        {{#if memory.lat}}
 
-      {{#marker-layer
-        location=(arr memory.lat memory.lng)
-        icon=(icon iconUrl="/images/record50px.png" iconSize=(point 40 40))}}
-        {{#popup-layer}}
-          <h2>{{emoji-character memory.emoji }} {{ memory.user.username }} </h2>
-        {{/popup-layer}}
-      {{/marker-layer}}
-    {{/if}}
-  {{/each}}
-
-
-{{/leaflet-map}}
+          {{#marker-layer
+            location=(arr memory.lat memory.lng)
+            icon=(icon iconUrl="/images/record50px.png" iconSize=(point 40 40))}}
+            {{#popup-layer}}
+              <h2>{{emoji-character memory.emoji }} {{ memory.user.username }} </h2>
+            {{/popup-layer}}
+          {{/marker-layer}}
+        {{/if}}
+      {{/each}}
+    {{/leaflet-map}}
+</div>
+<div class="map-button">
+  {{#link-to "etch" class="button is-medium is-warning"}}
+  etch a new memory
+  {{/link-to}}
+</div>
