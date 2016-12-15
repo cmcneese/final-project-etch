@@ -21,3 +21,22 @@
 .etch-info {
   color: $primary;
 }
+
+.emoji__button {
+  border: 0;
+  background: none;
+  opacity: 0.4;
+  border-radius: 50%;
+  padding: 0.3rem;
+  outline: 0;
+
+  &:hover {
+    background-color: $dark-gray;
+  }
+
+  &.emoji__button--active {
+    opacity:1;
+    background: $warning;
+
+  }
+}
