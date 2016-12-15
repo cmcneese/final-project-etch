@@ -1,64 +1,59 @@
 {{outlet}}
-<div class="media">
+<div class="columns">
 
-  <div class="media-left">
-    {{profile-pic user=user large=true}}
+  <div class="column is-3">
+    <div class="profile__pic">
+      {{profile-pic user=user large=true}}
+    </div>
 
-    {{#if myProfile}}
-      <button type="button" class="button is-fullwidth is-warning" {{action onChoosePic}}>Upload Profile Pic</button>
-    {{/if}}
-  </div>
-
-  <div class="media-content">
     {{#liquid-if editing class="to-left"}}
       {{#simple-form startingValues=user onsubmit=(action "update" (action toggleProperty "editing")) as |formValues|}}
 
-        <p class="control">
-          {{input value=formValues.username placeholder="Username" class="input"}}
+        <p class="control center-buttons">
+          <button type="button" class="button is-small is-warning" {{action onChoosePic}}>Upload Profile Pic</button>
         </p>
+
         <p class="control">
-          {{input value=formValues.email placeholder="Email" class="input"}}
+          {{input value=formValues.name placeholder="Name" class="input"}}
         </p>
         <p class="control">
           {{input value=formValues.location placeholder="Location" class="input"}}
         </p>
-        <button class="button is-warning">Submit</button>
+
+        <p class="control center-buttons">
+          <button class="button is-warning">Submit</button>
+          <button class="button is-warning" {{action toggleProperty "editing"}}>Cancel</button>
+        </p>
+
       {{/simple-form}}
     {{else}}
-      <h2 class="title">{{user.name}}</h2>
-      <h2 class="subtitle">@{{user.username}}</h2>
-      <h2 class="subtitle">{{emoji-character "earth_americas"}} {{user.location}}</h2>
+      <div class="profile__content">
+        <h2 class="title">{{user.name}}</h2>
+        <h2 class="subtitle">@{{user.username}}</h2>
+        <h2 class="subtitle">{{emoji-character "earth_americas"}} {{user.location}}</h2>
 
-      {{#if myProfile}}
-        <button class="button is-primary" {{action toggleProperty "editing"}}>Edit</button>
-      {{/if}}
+        {{#if myProfile}}
+          <button class="button is-small is-primary" {{action toggleProperty "editing"}}>Edit</button>
+        {{/if}}
+      </div>
     {{/liquid-if}}
   </div>
-  <div class="info content">
-    {{!-- <h1 class="profile__username">@{{user.username}}</h1> --}}
-  </div>
-</div>
-
-<div class="columns is-multiline">
-  <div class="column is-12">
+  <div class="column is-8 is-offset-1">
     <h2 class="title has-underline">Recent Memories</h2>
-  </div>
-  {{#each (take 4 (sort-by "createdAt:desc" user.memories)) as | memory |}}
-    <div class="column">
-      <div class="memory">
-        <div class="record record--with-center">
-          <img class="record__pic" src= {{memory.track.album.images.firstObject.url}}>
+    <div class="memories">
+      {{#each (take 8 (sort-by "createdAt:desc" user.memories)) as | memory |}}
+        <div class="memory">
+          <div class="record record--with-center">
+            <img class="record__pic" src= {{memory.track.album.images.firstObject.url}}>
+          </div>
+          <h3 class="recent-memory__trackname">{{memory.track.name}}</h3>
         </div>
-        <h3 class="recent-memory__trackname">{{memory.track.name}}</h3>
-      </div>
+      {{else}}
+        <h2 class="title">This user has not etched any memories.</h2>
+      {{/each}}
     </div>
-  {{else}}
-    <div class="column">
-      <h2 class="title">This user has not etched any memories.</h2>
+    <div class="actions">
+      <h3 class="all-memories__button"> {{#link-to 'admin.friends.memories' user class="button is-large is-primary"}}All Memories{{/link-to}}</h3>
     </div>
-  {{/each}}
-</div>
-
-<div class="actions">
-  <h3 class="all-memories__button"> {{#link-to 'admin.friends.memories' user class="button is-large is-primary"}}All Memories{{/link-to}}</h3>
+  </div>
 </div>
