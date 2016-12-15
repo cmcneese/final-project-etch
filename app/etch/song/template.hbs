@@ -29,7 +29,7 @@
           <p class="control">
 
             {{#each emotions as |emotion|}}
-              <button {{action (action (mut formValues.emoji) emotion)}}>{{emoji-character emotion class="icon"}}</button>
+              <button class="emoji__button {{if (eq emotion formValues.emoji) "emoji__button--active"}}" {{action (action (mut formValues.emoji) emotion)}}>{{emoji-character emotion class="icon"}}</button>
             {{/each}}
 
           </p>
