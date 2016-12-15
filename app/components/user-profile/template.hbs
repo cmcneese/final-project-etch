@@ -42,7 +42,7 @@
     <h2 class="title has-underline">Recent Memories</h2>
     <div class="memories">
       {{#each (take 8 (sort-by "createdAt:desc" user.memories)) as | memory |}}
-        <div class="memory">
+        <a class="memory" href="https://open.spotify.com/track/{{memory.track.id}}" target="_blank">
           <div class="record record--with-center">
             <img class="record__pic" src= {{memory.track.album.images.firstObject.url}}>
           </div>
@@ -50,7 +50,7 @@
             <h2 class="title is-5">{{memory.track.artists.[0].name}}</h2>
             <h2 class="subtitle is-6">{{memory.track.name}}</h2>
           </div>
-        </div>
+        </a>
       {{else}}
         <h2 class="title">This user has not etched any memories.</h2>
       {{/each}}

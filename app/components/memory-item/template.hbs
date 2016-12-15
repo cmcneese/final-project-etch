@@ -1,7 +1,7 @@
   <li class="etch-memories__item is-clearfix">
-    <div class="record record--with-center">
+    <a class="record record--with-center" href="https://open.spotify.com/track/{{memory.track.id}}" target="_blank">
       <img class="record__pic" src="{{memory.track.album.images.firstObject.url}}"/>
-    </div>
+    </a>
 
     <div class="etch-memories__item-content">
       <p>{{moment-from-now memory.createdAt}}</p>
