@@ -46,7 +46,10 @@
           <div class="record record--with-center">
             <img class="record__pic" src= {{memory.track.album.images.firstObject.url}}>
           </div>
-          <h3 class="recent-memory__trackname">{{memory.track.name}}</h3>
+          <div class="memory__content has-text-centered">
+            <h2 class="title is-5">{{memory.track.artists.[0].name}}</h2>
+            <h2 class="subtitle is-6">{{memory.track.name}}</h2>
+          </div>
         </div>
       {{else}}
         <h2 class="title">This user has not etched any memories.</h2>

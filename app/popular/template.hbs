@@ -5,14 +5,17 @@
   <p>Check out the top 10 most popular songs on etch right now!</p>
 </div>
 
-  <div class="popular-memories">
+  <div class="memories">
 
-    {{#each model as |track|}}
-    <div class="pop-memory">
+    {{#each model as |track index|}}
+    <div class="memory">
       <div class="record record--with-center">
         <img class="record__pic" src="{{track.album.images.firstObject.url}}"/>
       </div>
-      <h1 class="content is-large">{{album.name}}{{track.name}}</h1>
+      <div class="memory__content has-text-centered">
+        <h2 class="title is-5">#{{index}} {{track.artists.[0].name}}</h2>
+        <h2 class="subtitle is-6">{{track.name}}</h2>
+      </div>
     </div>
     {{/each}}
 

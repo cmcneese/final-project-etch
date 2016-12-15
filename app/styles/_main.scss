@@ -10,7 +10,6 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-end;
   margin-top: 3rem;
 }
 
@@ -24,4 +23,8 @@ body {
   height: 150px;
   display: block;
   margin: 0 auto;
+}
+
+.memory__content {
+  margin: 1rem 0 2rem;
 }

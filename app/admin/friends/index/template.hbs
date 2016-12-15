@@ -9,7 +9,10 @@
   {{#each model as |friend|}}
   {{#link-to "admin.friends.profile" friend class="memory"}}
     {{profile-pic user=friend}}
-    <p class="has-text-centered subtitle">{{friend.username}}</p>
+    <div class="memory__content has-text-centered">
+      <h2 class="title is-5">{{friend.username}}</h2>
+      <h2 class="subtitle is-6">{{friend.name}}</h2>
+    </div>
   {{/link-to}}
   {{/each}}
 </div>
