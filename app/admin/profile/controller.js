@@ -30,7 +30,7 @@ export default Ember.Controller.extend({
   actions: {
     update(closeForm, formValues) {
       this.model.setProperties(formValues);
-      this.model.save(formValues).then(() => {
+      this.model.save().then(() => {
         closeForm();
       });
     },

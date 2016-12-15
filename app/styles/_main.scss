@@ -5,28 +5,16 @@ body {
   // font-family: 'Quicksand', sans-serif;
 }
 
-.record {
-  display: block;
-  margin: 0 auto;
-  // position: fixed;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // width: 50%;
-  max-width: 400px;
-}
-
 .memories {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-end;
   margin-top: 3rem;
 }
 
 .memory {
-  flex: 1 200px;
+  flex: 1 25%;
   background: $white;
 }
 
@@ -35,4 +23,8 @@ body {
   height: 150px;
   display: block;
   margin: 0 auto;
+}
+
+.memory__content {
+  margin: 1rem 0 2rem;
 }

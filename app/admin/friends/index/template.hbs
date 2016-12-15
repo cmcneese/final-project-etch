@@ -5,11 +5,14 @@
   <p class="subtitle is-4">{{emoji-character "mouse_three_button"}} Click their pic and check out what they're etching! {{emoji-character "notes"}}</p>
 </div>
 
-<div class="accounts">
+<div class="memories">
   {{#each model as |friend|}}
   {{#link-to "admin.friends.profile" friend class="memory"}}
     {{profile-pic user=friend}}
-    <p class="has-text-centered subtitle">{{friend.username}}</p>
+    <div class="memory__content has-text-centered">
+      <h2 class="title is-5">{{friend.username}}</h2>
+      <h2 class="subtitle is-6">{{friend.name}}</h2>
+    </div>
   {{/link-to}}
   {{/each}}
 </div>
