@@ -1,5 +1,8 @@
   <li class="etch-memories__item is-clearfix">
-    <img class="record" src="{{memory.track.album.images.firstObject.url}}"/>
+    <div class="record record--with-center">
+      <img class="record__pic" src="{{memory.track.album.images.firstObject.url}}"/>
+    </div>
+
     <div class="etch-memories__item-content">
       <p>{{moment-from-now memory.createdAt}}</p>
 
@@ -11,6 +14,5 @@
 
       <h2 class="subtitle is-6">{{memory.track.name}}</h2>
       <p class="shit">{{emoji-character memory.emoji}} {{memory.text}}</p>
-
     </div>
   </li>

@@ -8,15 +8,6 @@ export default Ember.Controller.extend({
     searchSong(term) {
       // updated to use spotify service
       return this.get('spotify').tracks(term);
-      // return $.getJSON({
-      //     url: 'https://api.spotify.com/v1/search',
-      //     data: {
-      //       q: term,
-      //       type: 'track'
-      //     },
-      //   }).then((data) => {
-      //     return data.tracks.items;
-      //   });
     },
 
     saveMemory(spotifyTrack, formValues) {
@@ -31,6 +22,7 @@ export default Ember.Controller.extend({
         });
 
         memory.save().then(() => {
+          this.set('disabled', false);
           this.transitionToRoute('admin.friends.memories', this.get('currentUser.user.id'));
         });
       }));
