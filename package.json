@@ -58,6 +58,7 @@
     "loader.js": "^4.0.10"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "ember-side-menu": "0.0.11"
   }
 }
